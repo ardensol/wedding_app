@@ -1,0 +1,53 @@
+<h1>Listing vendors</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Business name</th>
+      <th>Phone number</th>
+      <th>Website</th>
+      <th>Business desc</th>
+      <th>Headline</th>
+      <th>Street address</th>
+      <th>Apt ste</th>
+      <th>Zipcode</th>
+      <th>Show info</th>
+      <th>Travel</th>
+      <th>First name</th>
+      <th>Last name</th>
+      <th>Email</th>
+      <th>Encrypted password</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @vendors.each do |vendor| %>
+      <tr>
+        <td><%= vendor.business_name %></td>
+        <td><%= vendor.phone_number %></td>
+        <td><%= vendor.website %></td>
+        <td><%= vendor.business_desc %></td>
+        <td><%= vendor.headline %></td>
+        <td><%= vendor.street_address %></td>
+        <td><%= vendor.apt_ste %></td>
+        <td><%= vendor.zipcode %></td>
+        <td><%= vendor.show_info %></td>
+        <td><%= vendor.travel %></td>
+        <td><%= vendor.first_name %></td>
+        <td><%= vendor.last_name %></td>
+        <td><%= vendor.email %></td>
+        <td><%= vendor.encrypted_password %></td>
+        <td><%= link_to 'Show', vendor %></td>
+        <td><%= link_to 'Edit', edit_vendor_path(vendor) %></td>
+        <td><%= link_to 'Destroy', vendor, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Vendor', new_vendor_path %>

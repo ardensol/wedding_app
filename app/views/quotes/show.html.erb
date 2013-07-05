@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Quote type:</strong>
+  <%= @quote.quote_type %>
+</p>
+
+<p>
+  <strong>Wedding style:</strong>
+  <%= @quote.wedding_style %>
+</p>
+
+<p>
+  <strong>Budget:</strong>
+  <%= @quote.budget %>
+</p>
+
+<p>
+  <strong>Comments:</strong>
+  <%= @quote.comments %>
+</p>
+
+<p>
+  <strong>Event date:</strong>
+  <%= @quote.event_date %>
+</p>
+
+<p>
+  <strong>Event time:</strong>
+  <%= @quote.event_time %>
+</p>
+
+<p>
+  <strong>Zip code:</strong>
+  <%= @quote.zip_code %>
+</p>
+
+<p>
+  <strong>Solicitation type:</strong>
+  <%= @quote.solicitation_type %>
+</p>
+
+<%= link_to 'Edit', edit_quote_path(@quote) %> |
+<%= link_to 'Back', quotes_path %>
