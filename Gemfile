@@ -1,3 +1,5 @@
+#Undefined method relationships ERROR in show for quotes
+#create a relationships model to "follow" quotes
 #add config files for devise: http://railscasts.com/episodes/209-devise-revised?autoplay=true
 source 'https://rubygems.org'
 

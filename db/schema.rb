@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130705134226) do
+ActiveRecord::Schema.define(version: 20130707152531) do
 
   create_table "quotes", force: true do |t|
     t.string   "quote_type"
@@ -25,6 +25,17 @@ ActiveRecord::Schema.define(version: 20130705134226) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "relationships", force: true do |t|
+    t.integer  "vendor_id"
+    t.integer  "quote_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "relationships", ["quote_id"], name: "index_relationships_on_quote_id"
+  add_index "relationships", ["vendor_id", "quote_id"], name: "index_relationships_on_vendor_id_and_quote_id", unique: true
+  add_index "relationships", ["vendor_id"], name: "index_relationships_on_vendor_id"
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false

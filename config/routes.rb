@@ -7,7 +7,13 @@ WeddingApp::Application.routes.draw do
   get "static_pages/help"
   get "static_pages/vendors"
 
-  resources :quotes
+  resources :quotes do
+    member do
+      get :vendors, :quotes
+    end
+  end
+
+  resources :relationships, only: [:create, :destroy]
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

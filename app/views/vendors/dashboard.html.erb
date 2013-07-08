@@ -1,36 +1,5 @@
-#TBU
-
-<h1>Vendor Dashboard</h1>
-
-<table class="table">
-  <tr>
-    <th>Quote_ID</th>
-    <th>Quote Type</th>
-    <th>Budget</th>
-    <th>Comments</th>
-    <th>Date</th>
-    <th>Time</th>
-    <th>Zip Code</th>
-    <th>Solicitation Type</th>
-    <th></th>
-    <th></th>
-    
-  </tr>
-
-<% @vendors.each do |vendor| %>
-  <tr>
-    <td><%= vendor.quote.quote_id %></td>
-    <td><%= vendor.quote.quote_type %></td>
-    <td><%= vendor.quote.budget %></td>
-    <td><%= vendor.quote.comments %></td>
-    <td><%= vendor.quote.event_date %></td>
-    <td><%= vendor.quote.event_time %></td>
-    <td><%= vendor.quote.zip_code %></td>
-    <td><%= vendor.quote.solicitation_type %></td>
-    
-  </tr>
-<% end %>
-</table>
-
-<br />
-
+<div class="row">
+    <div class="large-9 large-8 columns">
+        <%= render 'quotes/quotes' %>
+    </div>
+</div>

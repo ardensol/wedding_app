@@ -7,7 +7,7 @@ class AddFieldsToVendors < ActiveRecord::Migration
   		add_column :vendors, :current_sign_in_at, :datetime
   		add_column :vendors, :current_sign_in_ip, :string
   		add_column :vendors, :last_sign_in_ip, :string
-  		## Recoverable
+      ## Recoverable
       ## Rememberable
 
       ## Trackable
